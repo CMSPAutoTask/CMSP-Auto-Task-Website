@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">        <!--https://boxicons.com/ -->
+
+    <title>CMSP AutoTask</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1 class="titulo-criar">Crie sua conta</h1>
+                <input type="text" placeholder="Seu nome inteiro">
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <button>Cadastrar</button>
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in">
+            <form>
+                <h1 class="titulo-entrar">Entrar</h1>
+                
+                <span>Utilize o mesmo login da SED</span>
+                <input type="email" placeholder="RA">
+                <input type="password" placeholder="Senha">
+                <a href="#">Esqueceu o RA?</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Crie sua contra<br> gratuita!</h1>
+                    <p>Feito por alunos para alunos, nós entendemos sua dor.<br> Crie sua conta gratuita e use nossos serviços <strong>ainda hoje!</strong></p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Eaí, alunos</h1>
+                    <p>Ainda não possui uma conta? <br><strong> Clique no botão abaixo!</strong></p>
+                    <button class="hidden" id="register">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

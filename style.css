@@ -106,7 +106,7 @@ body{
 
 .bem-vindo span::before{
     content: "Youtuber";
-    color: #08348c;
+    color: #535FA6;
     animation: words 20s infinite;
 }
 
@@ -115,8 +115,8 @@ body{
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    background: none;
-    border-left: 2px solid #08348c;
+    background-color: #08348c;
+    border-left: 2px solid  #535FA6;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
 }

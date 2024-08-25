@@ -106,7 +106,7 @@ body{
 
 .bem-vindo span::before{
     content: "Youtuber";
-    color: #ff7f50;
+    color: #08348c;
     animation: words 20s infinite;
 }
 
@@ -115,8 +115,8 @@ body{
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    background-color: #2f3542;
-    border-left: 2px solid #ff7f50;
+    background: none;
+    border-left: 2px solid #08348c;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
 }
@@ -129,19 +129,19 @@ body{
 
 @keyframes words {
     0%,20%{
-        content: "Youtuber";
+        content: "CMSP AutoTask";
     }
     21%,40%{
-        content: "Blogger";
+        content: "CMSP AutoTask";
     }
     41%,60%{
-        content: "Developer";
+        content: "CMSP AutoTask";
     }
     61%,80%{
-        content: "Designer";
+        content: "CMSP AutoTask";
     }
     81%,100%{
-        content: "Gamer";
+        content: "CMSP AutoTask";
     }
 }
 

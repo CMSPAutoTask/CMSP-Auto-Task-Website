@@ -89,69 +89,34 @@ body{
     5%,20%,25%,40%,45%,60%,65%,80%,85%{
         width: calc(100% + 8px);
     }
-}*/
-.bem-vindo{
-    text-align: center;
-    text-transform: uppercase;
-    padding: 7px;
-    color: #fff;
-    font-size: 24px;
-    letter-spacing: 0.3px;
-    margin: 10px;
+}
+----------
+.bem-vindo {
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-.bem-vindo span{
-    position: relative;
+.animated-text {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
 }
 
-.bem-vindo span::before{
-    content: "Youtuber";
-    color: #535FA6;
-    animation: words 20s infinite;
+@keyframes bem-vindo {
+  from {
+    width: 0
+  }
 }
-
-.bem-vindo span::after{
-    content: "";
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    background-color: #08348c;
-    border-left: 2px solid  #535FA6;
-    right: -8px;
-    animation: cursor .8s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor {
-    to{
-        border-left: 2px solid #ff7f5000;
-    }
-}
-
-@keyframes words {
-    0%,20%{
-        content: "CMSP AutoTask";
-    }
-    21%,40%{
-        content: "CMSP AutoTask";
-    }
-    41%,60%{
-        content: "CMSP AutoTask";
-    }
-    61%,80%{
-        content: "CMSP AutoTask";
-    }
-    81%,100%{
-        content: "CMSP AutoTask";
-    }
-}
-
-@keyframes typing {
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-        width: 0;
-    }
-    5%,20%,25%,40%,45%,60%,65%,80%,85%{
-        width: calc(100% + 8px);
-    }
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
 .container{

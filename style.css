@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 *{
     margin: 0;
@@ -26,15 +26,20 @@ body {
 }
   
 .texto-animado {
-    width: 22ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    color: #fff;
+    width: 27ch;
+    animation: typing 3s steps(25), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 5em;
 }
-  
+
+.texto-animado .destaque {
+    color: #037F8C;
+}
+
 @keyframes typing {
     from {
       width: 0

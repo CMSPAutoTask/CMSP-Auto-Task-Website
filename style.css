@@ -36,10 +36,6 @@ body {
     font-size: 5em;
 }
 
-.texto-animado .destaque {
-    color: #037F8C;
-}
-
 @keyframes typing {
     from {
       width: 0

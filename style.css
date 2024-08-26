@@ -26,7 +26,7 @@ body {
     place-items: center;
 }
 
-.textos-animado {
+.texto-animado {
     width: 22ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;

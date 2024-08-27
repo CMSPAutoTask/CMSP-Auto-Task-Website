@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     height: 100vh;
-    background-color: #eee;
+    background-image: url("https://edusp-static.ip.tv/webinar/edusp/background.png");
     /*background-image: url("background.png");*/
     background-size: cover;
     background-position: center;

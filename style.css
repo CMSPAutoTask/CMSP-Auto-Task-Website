@@ -29,7 +29,7 @@ body {
 .texto-animado {
     color: #eee;
     width: 32ch;
-    animation: typing 3s steps(27), blink .5s step-end infinite alternate;
+    animation: typing 3s steps(32), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
@@ -39,7 +39,6 @@ body {
 
 .texto-animado .destaque {
     color: #50c1d1;
-    text-shadow: #b7e6ec;
     overflow: hidden;
     border-right: 3px solid;
     font-family: 'Montserrat', sans-serif;

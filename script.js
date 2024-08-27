@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
+const registerBtn = document.getElementById('registerBtn'); 
+const loginBtn = document.getElementById('loginBtn');
 
 function register() {
     const user = document.getElementById('user_reg').value;

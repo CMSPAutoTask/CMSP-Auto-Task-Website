@@ -1,7 +1,3 @@
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
-
 function register() {
     const user = document.getElementById('user').value;
     const pw = document.getElementById('pw').value;
@@ -24,12 +20,3 @@ function register() {
         console.error('Erro:', error);
     });
 }
-
-registerBtn.addEventListener('click', () => {
-    register();
-    container.classList.add("active");
-});
-
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});

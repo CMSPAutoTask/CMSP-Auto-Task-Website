@@ -75,24 +75,24 @@ body {
 
 */
 
-.destaque {
+.bem-vindo h2 {
     position: relative;
 }
   
-.destaque {
+.bem-vindo h2 {
     color: #eee;
-    font-size: 8em;
+    font-size: 1em;
     position: absolute;
     text-transform: uppercase;
     transform: translate(-50%, -50%);
 }
   
-.destaque:nth-child(1) {
+.bem-vindo h2:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 2px #03a9f4;
 }
   
-.destaque:nth-child(2) {
+.bem-vindo h2:nth-child(2) {
     color: #03a9f4;
     animation: animate 4s ease-in-out infinite;
 }

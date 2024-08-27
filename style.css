@@ -38,6 +38,11 @@ body {
 
 .texto-animado .destaque {
     color: #037F8C;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 3em;
 }
 
 @keyframes typing {

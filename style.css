@@ -28,17 +28,18 @@ body {
   
 .texto-animado {
     color: #eee;
-    width: 27ch;
+    width: auto;
     animation: typing 3s steps(27), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.5em;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
 .texto-animado .destaque {
     color: #50c1d1;
+    text-shadow: #b7e6ec;
     overflow: hidden;
     border-right: 3px solid;
     font-family: 'Montserrat', sans-serif;

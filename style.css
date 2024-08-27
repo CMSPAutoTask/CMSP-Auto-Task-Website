@@ -75,11 +75,11 @@ body {
 
 */
 
-.bem-vindo h2 {
+.texto-animado {
     position: relative;
 }
   
-.bem-vindo h2 {
+.texto-animado {
     color: #eee;
     font-size: 1em;
     position: absolute;
@@ -87,12 +87,12 @@ body {
     transform: translate(-50%, -50%);
 }
   
-.bem-vindo h2:nth-child(1) {
+.texto-animado:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 2px #03a9f4;
 }
   
-.bem-vindo h2:nth-child(2) {
+.texto-animado:nth-child(2) {
     color: #03a9f4;
     animation: animate 4s ease-in-out infinite;
 }

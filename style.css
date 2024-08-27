@@ -37,6 +37,7 @@ body {
 
 .texto-animado .destaque {
     color: #50c1d1;
+    overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
 }

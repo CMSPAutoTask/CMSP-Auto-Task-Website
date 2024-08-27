@@ -7,46 +7,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">   
-    <script>
-        async function sendPostRequest() {
-    const url = 'https://verbose-zebra-7vrq6vq7r9x43xwq5-5000.app.github.dev/api/register';
-
-    // Dados a serem enviados no corpo da requisição
-    const data = {
-        user: "exampleUser",
-        pw: "examplePass"
-    };
-
-    // Configurações da requisição
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data),
-        credentials: 'include'  // Inclui cookies automaticamente, incluindo o gerado pelo forwarder
-    };
-
-    try {
-        // Envia a requisição
-        const response = await fetch(url, options);
-
-        // Lida com a resposta
-        if (response.ok) {
-            const result = await response.json();
-            console.log('Success:', result);
-        } else {
-            console.error('Error:', response.status, response.statusText);
-        }
-    } catch (error) {
-        console.error('Fetch error:', error);
-    }
-}
-
-// Chama a função para enviar a requisição
-sendPostRequest();
-    </script>     <!--https://boxicons.com/ -->
-
     <title>CMSP AutoTask - O seu poupador de tempo!</title>
 </head>
 
@@ -58,8 +18,8 @@ sendPostRequest();
         <div class="form-container sign-up">
             <form>
                 <h1 class="titulo-criar">Junte-se a nós!</h1>
-                <input type="ra" placeholder="RA + &quot;SP&quot;">
-                <input type="password" placeholder="Senha">
+                <input type="user_reg" id="user_reg" placeholder="RA + &quot;SP&quot;">
+                <input type="pw_reg" id="pw_reg" placeholder="Senha">
                 <input type="checkbox" id="terms" name="terms" value="terms">
                 <label for="terms"> Eu li e aceito os <a href="termos/terms.html">Termos de Serviço</a></label><br>
                 <button>Cadastrar</button>
@@ -72,10 +32,10 @@ sendPostRequest();
                 <h1 class="titulo-entrar">Entrar</h1>
                 
                 <span>Utilize o mesmo login da SED</span>
-                <input type="ra" placeholder="RA + &quot;SP&quot;">
-                <input type="password" placeholder="Senha">
+                <input type="user_log" id="user_log" placeholder="RA + &quot;SP&quot;">
+                <input type="pw_log" id="pw_log" placeholder="Senha">
                 <a href="https://sed.educacao.sp.gov.br/NCA/CadastroAluno/ConsultaRAAluno">Esqueceu o RA?</a>
-                <button>Entrar</button>
+                <button onclick="login()">Entrar</button>
             </form>
         </div>
 
@@ -90,12 +50,11 @@ sendPostRequest();
                 <div class="toggle-panel toggle-right">
                     <h1>E aí, aluno!</h1>
                     <p>Ainda não possui uma conta? <br><strong>Venha fazer parte do time!</strong></p>
-                    <button class="hidden" id="register" onclick= "sendPostRequest()">registrar</button>
+                    <button class="hidden" id="register" onclick= "register()">registrar</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="register.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -1,6 +1,6 @@
 function register() {
-    const user = document.getElementById('user').value;
-    const pw = document.getElementById('pw').value;
+    const user = document.getElementById('user_reg').value;
+    const pw = document.getElementById('pw_reg').value;
 
     const url = `https://verbose-zebra-7vrq6vq7r9x43xwq5-5000.app.github.dev/api/register?user=${encodeURIComponent(user)}&pw=${encodeURIComponent(pw)}`;
     

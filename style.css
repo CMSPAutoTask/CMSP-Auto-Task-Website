@@ -28,7 +28,7 @@ body {
   
 .texto-animado {
     color: #eee;
-    width: auto;
+    width: 32ch;
     animation: typing 3s steps(27), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;

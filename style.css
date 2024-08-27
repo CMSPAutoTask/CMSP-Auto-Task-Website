@@ -20,7 +20,7 @@ body {
 }
 
 .bem-vindo {
-    height: 100vh;
+    height: 15vh;
     display: grid;
     place-items: center;
 }
@@ -34,6 +34,10 @@ body {
     border-right: 3px solid;
     font-family: monospace;
     font-size: 3em;
+}
+
+.texto-animado .destaque {
+    color: #037F8C;
 }
 
 @keyframes typing {

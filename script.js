@@ -24,7 +24,6 @@ function register() {
     .catch((error) => {
         console.error('Error:', error);
         // Aqui você pode adicionar lógica para tratar erros
-        });
     });
 }
 
@@ -50,7 +49,6 @@ function login() {
     .catch((error) => {
         console.error('Error:', error);
         // Aqui você pode adicionar lógica para tratar erros
-        });
     });
 }
 

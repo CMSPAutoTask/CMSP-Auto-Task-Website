@@ -6,18 +6,52 @@ function register() {
     const user = document.getElementById('user_reg').value;
     const pw = document.getElementById('pw_reg').value;
 
-    const url = `https://verbose-zebra-7vrq6vq7r9x43xwq5-5000.app.github.dev/api/register?user=${encodeURIComponent(user)}&pw=${encodeURIComponent(pw)}`;
-    
-    window.location.href = url;
+    fetch('https://cmsp-auto-task.vercel.app/api/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            user: user,
+            pass: pw
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Aqui você pode adicionar lógica para tratar a resposta, como redirecionar ou mostrar uma mensagem
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Aqui você pode adicionar lógica para tratar erros
+        });
+    });
 }
 
 function login() {
     const user = document.getElementById('user_log').value;
     const pw = document.getElementById('pw_log').value;
 
-    const url = `https://verbose-zebra-7vrq6vq7r9x43xwq5-5000.app.github.dev/api/login?user=${encodeURIComponent(user)}&pw=${encodeURIComponent(pw)}`;
-    
-    window.location.href = url;
+    fetch('https://cmsp-auto-task.vercel.app/api/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            user: user,
+            pass: pw
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Aqui você pode adicionar lógica para tratar a resposta, como redirecionar ou mostrar uma mensagem
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Aqui você pode adicionar lógica para tratar erros
+        });
+    });
 }
 
 registerBtn.addEventListener('click', () => {

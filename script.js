@@ -13,7 +13,7 @@ function register() {
         },
         body: JSON.stringify({
             user: user,
-            pass: pw
+            pw: pw
         })
     })
     .then(response => response.json())
@@ -38,7 +38,7 @@ function login() {
         },
         body: JSON.stringify({
             user: user,
-            pass: pw
+            pw: pw
         })
     })
     .then(response => response.json())

@@ -70,8 +70,6 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
-
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
     var visible = true;
@@ -120,3 +118,7 @@ function consoleText(words, id, colors) {
         }
     }, 400)
 }
+
+consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
+
+

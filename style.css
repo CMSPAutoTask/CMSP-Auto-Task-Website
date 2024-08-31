@@ -210,12 +210,12 @@ body {
     height: 200px;
     width: 600px;
     display: block;
-    position: absolute;
+    position: fixed; 
     color: white;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 9999;
     margin: auto;
 }
 

@@ -10,6 +10,8 @@ function submitForm(formId, action, apiUrl) {
             const form = document.getElementById(formId);
             const userInput = document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log');
             const pwInput = document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log');
+            const statusLabel = form.querySelector('.lblStatus');
+
             const user = userInput.value;
             const pw = pwInput.value;
 
@@ -35,13 +37,13 @@ function submitForm(formId, action, apiUrl) {
                 console.log('Success:', data);
                 userInput.value = '';
                 pwInput.value = '';
-                document.getElementById('lblStatus').innerHTML = 'Sucesso! ;)';
-                document.getElementById('lblStatus').style.color = 'green';
+                statusLabel.innerHTML = 'Sucesso! ;)';
+                statusLabel.style.color = 'green';
             })
             .catch((error) => {
                 console.error('Error:', error);
-                document.getElementById('lblStatus').innerHTML = 'Oops! Verifique os dados e tente novamente.';
-                document.getElementById('lblStatus').style.color = 'red';
+                statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
+                statusLabel.style.color = 'red';
             });
         });
     });

@@ -24,7 +24,13 @@ function submitForm(formId, action, apiUrl) {
                     'g-recaptcha-response': token
                 })
             })
-            .then(response => response.json())
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    throw new Error('Failed to submit form');
+                }
+            })
             .then(data => {
                 console.log('Success:', data);
                 userInput.value = '';

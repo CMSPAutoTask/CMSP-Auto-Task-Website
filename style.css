@@ -203,10 +203,6 @@ body {
     transform: translateX(0);
 }
 
-.hidden {
-    opacity: 0;
-}
-
 .console-container {
     font-family: Khula;
     font-size: 4em;

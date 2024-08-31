@@ -18,6 +18,7 @@
                 <input type="password" id="pw_reg" name="pw_reg" placeholder="Senha">
                 <input type="checkbox" id="terms" name="terms" value="terms">
                 <label for="terms"> Eu li e aceito os <a href="termos/terms.html">Termos de Serviço</a></label><br>
+                <label id="lblStatus"></label>
                 <button id="createAccountBtn" type="button" onclick="register()">Cadastrar</button>
             </form>
         </div>
@@ -29,6 +30,7 @@
                 <input type="text" id="user_log" name="user_log" placeholder="RA + &quot;SP&quot;">
                 <input type="password" id="pw_log" name="pw_log" placeholder="Senha">
                 <a href="https://sed.educacao.sp.gov.br/NCA/CadastroAluno/ConsultaRAAluno">Esqueceu o RA?</a>
+                <label id="lblStatus"></label>
                 <button type="button" onclick="login()">Entrar</button>
             </form>
         </div>

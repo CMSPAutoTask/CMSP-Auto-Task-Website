@@ -34,14 +34,12 @@ function submitForm(formId, action, apiUrl) {
                 }
             })
             .then(data => {
-                console.log('Success:', data);
                 userInput.value = '';
                 pwInput.value = '';
                 statusLabel.innerHTML = 'Sucesso! ;)';
                 statusLabel.style.color = 'green';
             })
             .catch((error) => {
-                console.error('Error:', error);
                 statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
                 statusLabel.style.color = 'red';
             });

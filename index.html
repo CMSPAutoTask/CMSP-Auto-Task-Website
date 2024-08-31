@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">   
     <title>CMSP AutoTask - O seu poupador de tempo!</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj"></script>
 </head>
-
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="registerForm">
                 <h1 class="titulo-criar">Junte-se a nós!</h1>
                 <input type="text" id="user_reg" name="user_reg" placeholder="RA + &quot;SP&quot;">
                 <input type="password" id="pw_reg" name="pw_reg" placeholder="Senha">
                 <input type="checkbox" id="terms" name="terms" value="terms">
                 <label for="terms"> Eu li e aceito os <a href="termos/terms.html">Termos de Serviço</a></label><br>
-                <button id="createAccountBtn" type="button" onclick="register()">Cadastrar</button>
+                <button id="createAccountBtn" type="button" onclick="submitForm('registerForm', 'register')">Cadastrar</button>
             </form>
         </div>
 
         <div class="form-container sign-in">
-            <form>
+            <form id="loginForm">
                 <h1 class="titulo-entrar">Entrar</h1>
                 <span>Utilize o mesmo login da SED</span>
                 <input type="text" id="user_log" name="user_log" placeholder="RA + &quot;SP&quot;">
                 <input type="password" id="pw_log" name="pw_log" placeholder="Senha">
                 <a href="https://sed.educacao.sp.gov.br/NCA/CadastroAluno/ConsultaRAAluno">Esqueceu o RA?</a>
-                <button type="button" onclick="login()">Entrar</button>
+                <button type="button" onclick="submitForm('loginForm', 'login')">Entrar</button>
             </form>
         </div>
 
@@ -49,7 +47,22 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
-</body>
 
+    <script>
+        function submitForm(formId, action) {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', {action: action}).then(function(token) {
+                    // Adiciona o token ao formulário
+                    var form = document.getElementById(formId);
+                    var input = document.createElement('input');
+                    input.setAttribute('type', 'hidden');
+                    input.setAttribute('name', 'g-recaptcha-response');
+                    input.setAttribute('value', token);
+                    form.appendChild(input);
+                    form.submit();
+                });
+            });
+        }
+    </script>
+</body>
 </html>

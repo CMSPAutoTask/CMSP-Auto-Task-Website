@@ -54,9 +54,12 @@ function login() {
     });
 }
 
-termsCheckBox.onchange = function() {
-  createAccountBtn.disabled = !this.checked;
-};
+function updateButtonState() {
+  createAccountBtn.disabled = !termsCheckBox.checked;
+}
+
+termsCheckBox.onchange = updateButtonState;
+updateButtonState();
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
@@ -65,3 +68,5 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+

@@ -29,9 +29,11 @@ function submitForm(formId, action, apiUrl) {
                 console.log('Success:', data);
                 userInput.value = '';
                 pwInput.value = '';
+                document.getElementById('lblStatus').innerHTML = 'Sucesso! ;)';
             })
             .catch((error) => {
                 console.error('Error:', error);
+                document.getElementById('lblStatus').innerHTML = 'Oops! Verifique os dados e tente novamente! ;c';
             });
         });
     });

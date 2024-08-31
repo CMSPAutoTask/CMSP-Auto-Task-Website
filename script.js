@@ -55,7 +55,7 @@ function login() {
 }
 
 termsCheckBox.onchange = function() {
-  createAccountBtn.disabled = !!this.checked;
+  createAccountBtn.disabled = !this.checked;
 };
 
 registerBtn.addEventListener('click', () => {

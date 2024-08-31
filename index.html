@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>CMSP AutoTask - O seu poupador de tempo!</title>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj"></script>
-    <script src="script.js" defer></script> <!-- Inclua o JS aqui -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container" id="container">
@@ -16,7 +16,7 @@
                 <h1 class="titulo-criar">Junte-se a nós!</h1>
                 <input type="text" id="user_reg" name="user_reg" placeholder="RA + &quot;SP&quot;">
                 <input type="password" id="pw_reg" name="pw_reg" placeholder="Senha">
-                <label id="lblStatusLogin"></label>
+                <label id="lblStatus"></label>
                 <input type="checkbox" id="terms" name="terms" value="terms">
                 <label for="terms"> Eu li e aceito os <a href="termos/terms.html">Termos de Serviço</a></label><br>
                 <button id="createAccountBtn" type="button" onclick="register()">Cadastrar</button>
@@ -29,7 +29,7 @@
                 <span>Utilize o mesmo login da SED</span>
                 <input type="text" id="user_log" name="user_log" placeholder="RA + &quot;SP&quot;">
                 <input type="password" id="pw_log" name="pw_log" placeholder="Senha">
-                <label id="lblStatusRegister"></label>
+                <label id="lblStatus"></label>
                 <a href="https://sed.educacao.sp.gov.br/NCA/CadastroAluno/ConsultaRAAluno">Esqueceu o RA?</a>
                 <button type="button" onclick="login()">Entrar</button>
             </form>

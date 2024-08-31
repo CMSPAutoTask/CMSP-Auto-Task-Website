@@ -4,6 +4,10 @@ const loginBtn = document.getElementById('loginBtn');
 const termsCheckBox = document.getElementById('terms');
 const createAccountBtn = document.getElementById('createAccountBtn');
 
+document.addEventListener('DOMContentLoaded', function() {
+    consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text', ['tomato', 'rebeccapurple', 'lightblue']);
+});
+
 function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
         grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', { action: action }).then(function(token) {

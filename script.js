@@ -8,8 +8,10 @@ function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
         grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', { action: action }).then(function(token) {
             const form = document.getElementById(formId);
-            const user = document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log').value;
-            const pw = document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log').value;
+            const userInput = document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log');
+            const pwInput = document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log');
+            const user = userInput.value;
+            const pw = pwInput.value;
 
             fetch(apiUrl, {
                 method: 'POST',
@@ -25,11 +27,11 @@ function submitForm(formId, action, apiUrl) {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                // Aqui você pode adicionar lógica para tratar a resposta, como redirecionar ou mostrar uma mensagem
+                userInput.value = '';
+                pwInput.value = '';
             })
             .catch((error) => {
                 console.error('Error:', error);
-                // Aqui você pode adicionar lógica para tratar erros
             });
         });
     });
@@ -37,12 +39,10 @@ function submitForm(formId, action, apiUrl) {
 
 function register() {
     submitForm('registerForm', 'register', 'https://cmsp-auto-task.vercel.app/api/register');
-    document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log').value = '';
 }
 
 function login() {
     submitForm('loginForm', 'login', 'https://cmsp-auto-task.vercel.app/api/login');
-    document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log').value.value = '';
 }
 
 function updateButtonState() {

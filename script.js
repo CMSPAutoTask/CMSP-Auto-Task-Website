@@ -1,6 +1,8 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('registerBtn'); 
 const loginBtn = document.getElementById('loginBtn');
+const termsCheckBox = document.getElementById('terms');
+const createAccountBtn = document.getElementById('createAccountBtn');
 
 function register() {
     const user = document.getElementById('user_reg').value;
@@ -51,6 +53,10 @@ function login() {
         // Aqui você pode adicionar lógica para tratar erros
     });
 }
+
+termsCheckBox.onchange = function() {
+  createAccountBtn.disabled = !!this.checked;
+};
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");

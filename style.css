@@ -204,7 +204,7 @@ body {
 }
 
 .console-container {
-    font-family: 'Calvier', sans-serif;
+    font-family: 'Calvier', sans-serif !important;
     font-size: 4em;
     text-align: center;
     height: 100px; 

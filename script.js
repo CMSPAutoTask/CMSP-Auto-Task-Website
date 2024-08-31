@@ -119,6 +119,6 @@ function consoleText(words, id, colors) {
     }, 400)
 }
 
-consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
+consoleText(['CMSP Auto Task.', 'Poupe tempo.', 'Aprenda.'], 'text',['tomato','rebeccapurple','lightblue']);
 
 

@@ -37,10 +37,12 @@ function submitForm(formId, action, apiUrl) {
 
 function register() {
     submitForm('registerForm', 'register', 'https://cmsp-auto-task.vercel.app/api/register');
+    document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log').value = '';
 }
 
 function login() {
     submitForm('loginForm', 'login', 'https://cmsp-auto-task.vercel.app/api/login');
+    document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log').value.value = '';
 }
 
 function updateButtonState() {

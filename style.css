@@ -23,7 +23,7 @@ body {
 .container {
     background-color: #eee;
     border-radius: 30px;
-    box-shadow: 5px 5px 7px 10px rgba(40, 84, 228, 0.541);
+    box-shadow: 5px 5px 7px 10px rgba(83, 22, 168, 0.5);
     position: relative;
     overflow: hidden;
     width: 768px;

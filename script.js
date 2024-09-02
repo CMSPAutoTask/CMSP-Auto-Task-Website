@@ -11,6 +11,7 @@ function submitForm(formId, action, apiUrl) {
             const userInput = document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log');
             const pwInput = document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log');
             const statusLabel = form.querySelector('.lblStatus');
+            const loader = document.getElementById('loader');
 
             const user = userInput.value;
             const pw = pwInput.value;
@@ -18,7 +19,11 @@ function submitForm(formId, action, apiUrl) {
             function showError() {
                 statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
                 statusLabel.style.color = 'red';
+                loader.style.display = 'none';
             }
+
+            loader.style.display = 'block';
+            statusLabel.innerHTML = '';
 
             fetch(apiUrl, {
                 method: 'POST',
@@ -32,6 +37,7 @@ function submitForm(formId, action, apiUrl) {
                 })
             })
             .then(response => {
+                loader.style.display = 'none';
                 if (response.status === 200 || response.status === 201) {
                     userInput.value = '';
                     pwInput.value = '';

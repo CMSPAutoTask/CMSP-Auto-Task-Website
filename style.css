@@ -226,5 +226,5 @@ body {
 }
 
 .terms-label {
-    color: #7048A8;
+    color: #7048A8 !important; 
 }

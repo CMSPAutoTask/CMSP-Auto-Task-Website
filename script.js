@@ -27,7 +27,7 @@ function submitForm(formId, action, apiUrl) {
                 })
             })
             .then(response => {
-                if (response.status === 200) {
+                if (response.status === 200 || response.status === 201) {
                     return response.json();
                 } else {
                     throw new Error('Failed to submit form');

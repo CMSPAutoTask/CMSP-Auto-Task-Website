@@ -15,6 +15,11 @@ function submitForm(formId, action, apiUrl) {
             const user = userInput.value;
             const pw = pwInput.value;
 
+            function showError() {
+                statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
+                statusLabel.style.color = 'red';
+            }
+
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
@@ -33,13 +38,11 @@ function submitForm(formId, action, apiUrl) {
                     statusLabel.innerHTML = 'Sucesso! ;)';
                     statusLabel.style.color = 'green';
                 } else {
-                    statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
-                    statusLabel.style.color = 'red';
+                    showError();
                 }
             })
             .catch(() => {
-                statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
-                statusLabel.style.color = 'red';
+                showError();
             });
         });
     });

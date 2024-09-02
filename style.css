@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    background-color: #5316A8;
+    background-color: #eee;
     border-radius: 30px;
     box-shadow: 5px 5px 7px 10px rgba(40, 84, 228, 0.541);
     position: relative;
@@ -43,7 +43,7 @@ body {
 }
 
 .container a {
-    color: #5316A8;
+    color: #eee;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
@@ -51,7 +51,7 @@ body {
 
 .container button {
     background-color: rgb(8, 52, 140);
-    color: #5316A8;
+    color: #eee;
     font-size: 12px;
     padding: 10px 45px;
     border: 2px solid transparent;
@@ -65,11 +65,11 @@ body {
 
 .container button.hidden {
     background-color: transparent;
-    border-color: #5316A8;
+    border-color: #eee;
 }
 
 .container form {
-    background-color: #5316A8;
+    background-color: #eee;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@ body {
 }
 
 .container input {
-    background-color: #5316A8;
+    background-color: #eee;
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
@@ -161,7 +161,7 @@ body {
 .toggle {
     background-color: rgba(8, 52, 140);
     height: 100%;
-    color: #5316A8;
+    color: #eee;
     position: relative;
     left: -100%;
     height: 100%;

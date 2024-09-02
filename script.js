@@ -28,18 +28,16 @@ function submitForm(formId, action, apiUrl) {
             })
             .then(response => {
                 if (response.status === 200 || response.status === 201) {
-                    return response.json();
+                    userInput.value = '';
+                    pwInput.value = '';
+                    statusLabel.innerHTML = 'Sucesso! ;)';
+                    statusLabel.style.color = 'green';
                 } else {
-                    throw new Error('Failed to submit form');
+                    statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
+                    statusLabel.style.color = 'red';
                 }
             })
-            .then(data => {
-                userInput.value = '';
-                pwInput.value = '';
-                statusLabel.innerHTML = 'Sucesso! ;)';
-                statusLabel.style.color = 'green';
-            })
-            .catch((error) => {
+            .catch(() => {
                 statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
                 statusLabel.style.color = 'red';
             });

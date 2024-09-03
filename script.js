@@ -66,7 +66,7 @@ function login() {
 }
 
 function updateButtonState() {
-  createAccountBtn.disabled = !termsCheckBox.checked;
+    createAccountBtn.disabled = !termsCheckBox.checked;
 }
 
 termsCheckBox.onchange = updateButtonState;
@@ -85,13 +85,14 @@ modalBtn.onclick = function() {
     container.style.display = 'none';  
 }
 
-modelSpan.onclick = function() {
+modalSpan.onclick = function() {
     modal.style.display = "none";
     container.style.display = 'block'; 
 }
 
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
+        container.style.display = 'block'; 
     }
-} 
+}

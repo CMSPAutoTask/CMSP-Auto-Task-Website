@@ -97,13 +97,13 @@ function recoverPassword() {
             })
             .then(response => {
                 if (response.status === 200 || response.status === 201) {
-                    alert("Secret is valid. Please create a new account using your RA with your desired new password.");
+                    alert("Sucesso! Crie uma nova conta usando seu RA com sua nova senha desejada. Seus dados e plano permancerão após a conta ser criada novamente.");
                 } else {
-                    alert("Invalid user or secret. Please try again.");
+                    alert("Usuário ou segredo inválido. Tente novamente.");
                 }
             })
             .catch(() => {
-                alert("An error occurred. Please try again later.");
+                alert("Ocorreu um erro. Tente novamente mais tarde.");
             });
         });
     });

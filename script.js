@@ -81,15 +81,17 @@ loginBtn.addEventListener('click', () => {
 });
 
 modalBtn.onclick = function() {
-  modal.style.display = "block";
+    modal.style.display = "block";
+    container.style.display = 'none';  
 }
 
 modelSpan.onclick = function() {
-  modal.style.display = "none";
+    modal.style.display = "none";
+    container.style.display = 'block'; 
 }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 } 

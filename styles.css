@@ -241,6 +241,10 @@ body {
     width: 80%; 
 }
 
+.recovery-text {
+    color: #2D0C5B;
+}
+
 .close {
     color: #aaa;
     float: right;

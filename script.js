@@ -97,7 +97,7 @@ function recoverPassword() {
                 body: JSON.stringify(requestBody)
             })
             .then(response => {
-                if (response.status === 200 || response.status === 201) {
+                if (response.ok) {
                     alert("Sucesso! Crie uma nova conta usando seu RA com sua nova senha desejada. Seus dados e plano permancerão após a conta ser criada novamente.");
                 } else {
                     alert("Usuário ou segredo inválido. Tente novamente.");

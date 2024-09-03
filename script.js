@@ -27,7 +27,7 @@ function submitForm(formId, action, apiUrl) {
 
             if (formId === 'registerForm') {
                 const secInput = document.getElementById('sec_reg');
-                requestBody.sec_reg = secInput.value;
+                requestBody.sec = secInput.value;
             }
 
             function showError() {

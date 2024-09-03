@@ -19,6 +19,17 @@ function submitForm(formId, action, apiUrl) {
             const user = userInput.value;
             const pw = pwInput.value;
 
+            let requestBody = {
+                user: user,
+                pw: pw,
+                'g-recaptcha-response': token
+            };
+
+            if (formId === 'registerForm') {
+                const secInput = document.getElementById('sec_reg');
+                requestBody.sec_reg = secInput.value;
+            }
+
             function showError() {
                 statusLabel.innerHTML = 'Oops! Verifique os dados e tente novamente.';
                 statusLabel.style.color = 'red';
@@ -33,17 +44,16 @@ function submitForm(formId, action, apiUrl) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    user: user,
-                    pw: pw,
-                    'g-recaptcha-response': token
-                })
+                body: JSON.stringify(requestBody)
             })
             .then(response => {
                 loader.style.display = 'none';
                 if (response.status === 200 || response.status === 201) {
                     userInput.value = '';
                     pwInput.value = '';
+                    if (formId === 'registerForm') {
+                        secInput.value = '';
+                    }
                     statusLabel.innerHTML = 'Sucesso! ;)';
                     statusLabel.style.color = 'green';
                 } else {
@@ -56,6 +66,7 @@ function submitForm(formId, action, apiUrl) {
         });
     });
 }
+
 
 function register() {
     submitForm('registerForm', 'register', 'https://cmsp-auto-task.vercel.app/api/register');

@@ -8,7 +8,7 @@ const recoveryBtn = document.getElementById("recoveryBtn");
 const recoverySpan = document.getElementsByClassName("close")[0];
 const recoverPasswordBtn = document.getElementById('recoverPasswordBtn');
 
-async function submitForm(formId, action, apiUrl) {
+function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
         grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', { action: action }).then(async function(token) {
             const form = document.getElementById(formId);

@@ -134,11 +134,4 @@ recoverySpan.onclick = function() {
     container.style.display = "block"; 
 }
 
-window.onclick = function(event) {
-    if (event.target === recovery) {
-        accountRecovery.style.display = "none";
-        container.style.display = "block"; 
-    }
-}
-
 recoverPasswordBtn.addEventListener('click', recoverPassword);

@@ -7,11 +7,10 @@ const accountRecovery = document.getElementById("accountRecovery");
 const recoveryBtn = document.getElementById("recoveryBtn");
 const recoverySpan = document.getElementsByClassName("close")[0];
 const recoverPasswordBtn = document.getElementById('recoverPasswordBtn');
-const bcrypt = window.dcodeIO.bcrypt;
 
-async function submitForm(formId, action, apiUrl) {
+function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
-        grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', { action: action }).then(async function(token) {
+        grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', { action: action }).then(function(token) {
             const form = document.getElementById(formId);
             const userInput = document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log');
             const pwInput = document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log');
@@ -21,11 +20,9 @@ async function submitForm(formId, action, apiUrl) {
             const user = userInput.value;
             const pw = pwInput.value;
 
-            const hashedPassword = await bcrypt.hash(pw, 10);
-
             let requestBody = {
                 user: user,
-                pw: hashedPassword, 
+                pw: pw,
                 'g-recaptcha-response': token
             };
 
@@ -101,7 +98,7 @@ function recoverPassword() {
             })
             .then(response => {
                 if (response.ok) {
-                    alert("Sucesso! Crie uma nova conta usando seu RA com sua nova senha desejada. Seus dados e plano permanecerão após a conta ser criada novamente.");
+                    alert("Sucesso! Crie uma nova conta usando seu RA com sua nova senha desejada. Seus dados e plano permancerão após a conta ser criada novamente.");
                 } else {
                     alert("Usuário ou segredo inválido. Tente novamente.");
                 }
@@ -138,4 +135,4 @@ recoverySpan.onclick = function() {
     container.style.display = "block"; 
 }
 
-recoverPasswordBtn.addEventListener('click', recoverPassword);
+recoverPasswordBtn.addEventListener('click', recoverPassword); 

@@ -3,6 +3,9 @@ const registerBtn = document.getElementById('registerBtn');
 const loginBtn = document.getElementById('loginBtn');
 const termsCheckBox = document.getElementById('terms');
 const createAccountBtn = document.getElementById('createAccountBtn');
+const modal = document.getElementById("myModal");
+const modalBtn = document.getElementById("myBtn");
+const modalSpan = document.getElementsByClassName("close")[0];
 
 function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
@@ -77,5 +80,16 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
+modalBtn.onclick = function() {
+  modal.style.display = "block";
+}
 
+modelSpan.onclick = function() {
+  modal.style.display = "none";
+}
 
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 

@@ -18,9 +18,11 @@
                 <input type="text" id="user_reg" name="user_reg" placeholder="RA + &quot;SP&quot;">
                 <input type="password" id="pw_reg" name="pw_reg" placeholder="Senha">
                 <input type="text" id="sec_reg" name="sec_reg" placeholder="Palavra secreta">
-                <label class="lblStatus">O segredo será para recuperação!</label>
-                <input type="checkbox" id="terms" name="terms" value="terms">
-                <label for="terms"> Eu li e aceito os <a class="strong-label" href="termos/terms.html">Termos de Serviço</a></label><br>
+                <label class="lblStatus">Anote a palavra secreta!</label>
+                <div class="checkbox-container">
+                    <label for="terms"> Eu li e aceito os <a class="strong-label" href="termos/terms.html">Termos de Serviço</a></label>
+                    <input type="checkbox" id="terms" name="terms" value="terms">
+                </div>
                 <button id="createAccountBtn" type="button" onclick="register()">Cadastrar</button>
             </form>
         </div>

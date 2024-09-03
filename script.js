@@ -7,6 +7,7 @@ const accountRecovery = document.getElementById("accountRecovery");
 const recoveryBtn = document.getElementById("recoveryBtn");
 const recoverySpan = document.getElementsByClassName("close")[0];
 const recoverPasswordBtn = document.getElementById('recoverPasswordBtn');
+const bcrypt = window.dcodeIO.bcrypt;
 
 async function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {

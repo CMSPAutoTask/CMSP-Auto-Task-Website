@@ -97,8 +97,8 @@ function recoverPassword() {
                 body: JSON.stringify(requestBody)
             })
             .then(response => {
-                if (response.ok) {
-                    alert("Sucesso! Crie uma nova conta usando seu RA com sua nova senha desejada. Seus dados e plano permanecerão após a conta ser criada novamente.");
+                if (response.status === 200 || response.status === 201) {
+                    alert("Sucesso! Crie uma nova conta usando seu RA com sua nova senha desejada. Seus dados e plano permancerão após a conta ser criada novamente.");
                 } else {
                     alert("Usuário ou segredo inválido. Tente novamente.");
                 }
@@ -109,7 +109,6 @@ function recoverPassword() {
         });
     });
 }
-
 
 function updateButtonState() {
     createAccountBtn.disabled = !termsCheckBox.checked;

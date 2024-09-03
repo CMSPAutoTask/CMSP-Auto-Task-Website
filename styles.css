@@ -258,3 +258,29 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+.recovery-input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.recovery-button {
+    background-color: #7920F4;
+    color: #eee;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    cursor: pointer;
+}
+

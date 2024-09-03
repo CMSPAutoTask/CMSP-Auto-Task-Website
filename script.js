@@ -3,9 +3,9 @@ const registerBtn = document.getElementById('registerBtn');
 const loginBtn = document.getElementById('loginBtn');
 const termsCheckBox = document.getElementById('terms');
 const createAccountBtn = document.getElementById('createAccountBtn');
-const modal = document.getElementById("myModal");
-const modalBtn = document.getElementById("myBtn");
-const modalSpan = document.getElementsByClassName("close")[0];
+const accountRecovery = document.getElementById("accountRecovery");
+const recoveryBtn = document.getElementById("recoveryBtn");
+const recoverySpan = document.getElementsByClassName("close")[0];
 
 function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
@@ -80,19 +80,19 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-modalBtn.onclick = function() {
-    modal.style.display = "block";
-    container.style.display = 'none';  
+recoveryBtn.onclick = function() {
+    accountRecovery.style.display = "block";
+    container.style.display = "none";  
 }
 
-modalSpan.onclick = function() {
-    modal.style.display = "none";
-    container.style.display = 'block'; 
+recoverySpan.onclick = function() {
+    accountRecovery.style.display = "none";
+    container.style.display = "block"; 
 }
 
 window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-        container.style.display = 'block'; 
+    if (event.target === recovery) {
+        accountRecovery.style.display = "none";
+        container.style.display = "block"; 
     }
 }

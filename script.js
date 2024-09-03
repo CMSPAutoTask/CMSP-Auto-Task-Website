@@ -49,10 +49,11 @@ function submitForm(formId, action, apiUrl) {
             })
             .then(response => {
                 loader.style.display = 'none';
-                if (response.status === 200 || response.status === 201) {
+                if (response.ok) {
                     userInput.value = '';
                     pwInput.value = '';
                     if (formId === 'registerForm') {
+                        const secInput = document.getElementById('sec_reg');
                         secInput.value = '';
                     }
                     statusLabel.innerHTML = 'Sucesso! ;)';

@@ -6,6 +6,7 @@ const createAccountBtn = document.getElementById('createAccountBtn');
 const accountRecovery = document.getElementById("accountRecovery");
 const recoveryBtn = document.getElementById("recoveryBtn");
 const recoverySpan = document.getElementsByClassName("close")[0];
+const recoverPasswordBtn = document.getElementById('recoverPasswordBtn');
 
 function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
@@ -67,13 +68,45 @@ function submitForm(formId, action, apiUrl) {
     });
 }
 
-
 function register() {
     submitForm('registerForm', 'register', 'https://cmsp-auto-task.vercel.app/api/register');
 }
 
 function login() {
     submitForm('loginForm', 'login', 'https://cmsp-auto-task.vercel.app/api/login');
+}
+
+function recoverPassword() {
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LcPKjMqAAAAACRFS-_zsvty2YIHUK0ylIY915wj', { action: 'recover_password' }).then(function(token) {
+            const user = document.getElementById('raRecovery').value;
+            const sec = document.getElementById('secretWord').value;
+
+            let requestBody = {
+                user: user,
+                sec: sec,
+                'g-recaptcha-response': token
+            };
+
+            fetch('https://cmsp-auto-task.vercel.app/api/recover-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestBody)
+            })
+            .then(response => {
+                if (response.status === 200 || response.status === 201) {
+                    alert("Secret is valid. Please create a new account using your RA with your desired new password.");
+                } else {
+                    alert("Invalid user or secret. Please try again.");
+                }
+            })
+            .catch(() => {
+                alert("An error occurred. Please try again later.");
+            });
+        });
+    });
 }
 
 function updateButtonState() {
@@ -107,3 +140,5 @@ window.onclick = function(event) {
         container.style.display = "block"; 
     }
 }
+
+recoverPasswordBtn.addEventListener('click', recoverPassword);

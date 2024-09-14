@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    background-color: #212121;
+    color: #CCCCCC;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cabeçalho */
+header {
+    padding: 18px;
+    text-align: start;
+    width: 100%;
+    border-top: #9415BF;
+}
+
+header h1 {
+    color: #C61CFF;
+}
+
+/* Centralização do conteúdo principal */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Área principal */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 10px; /* Espaço entre os cards */
+    justify-content: center; /* Centraliza horizontalmente o grid */
+    margin: auto; /* Para garantir que ocupe o espaço verticalmente */
+}
+
+/* Estilo dos cards */
+.card {
+    background-color: #310740;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 120px; /* Altura dos cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center;
+    overflow: hidden; /* Oculta o botão quando não está visível */
+}
+
+/* Botão "Resolver" e textos */
+.card h2, .card p {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Oculta textos ao passar o mouse */
+.card:hover h2, .card:hover p {
+    opacity: 0;
+}
+
+/* Efeitos ao passar o mouse */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão "Resolver" */
+.resolver-btn {
+    position: absolute;
+    bottom: -50px; /* Oculta o botão inicialmente */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9415BF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: bottom 0.3s ease-in-out, transform 0.3s; /* Animação suave ao aparecer */
+    font-size: 14px;
+}
+
+/* Faz o botão aparecer centralizado ao passar o mouse */
+.card:hover .resolver-btn {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Rodapé */
+footer {
+    background-color: #310740;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

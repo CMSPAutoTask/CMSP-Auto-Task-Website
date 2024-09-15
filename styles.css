@@ -50,7 +50,7 @@ body {
 }
 
 .container button {
-    background-color: #7920F4;
+    background-color: rgb(25, 21, 52);
     color: #eee;
     font-size: 12px;
     padding: 10px 45px;
@@ -159,7 +159,7 @@ body {
 }
 
 .toggle {
-    background-color: #2D0C5B;
+    background-color: rgb(17, 15, 35);
     height: 100%;
     color: #eee;
     position: relative;
@@ -271,7 +271,7 @@ body {
 }
 
 .recovery-button {
-    background-color: #7920F4;
+    background-color: rgb(25, 21, 52);
     color: #eee;
     font-size: 12px;
     padding: 10px 45px;

@@ -70,11 +70,11 @@ function submitForm(formId, action, apiUrl) {
 }
 
 function register() {
-    submitForm('registerForm', 'register', 'https://cmsp-auto-task.vercel.app/api/register');
+    submitForm('registerForm', 'register', 'https://mytask-sp.vercel.app/api/register');
 }
 
 function login() {
-    submitForm('loginForm', 'login', 'https://cmsp-auto-task.vercel.app/api/login');
+    submitForm('loginForm', 'login', 'https://mytask-sp.vercel.app/api/login');
 }
 
 function recoverPassword() {

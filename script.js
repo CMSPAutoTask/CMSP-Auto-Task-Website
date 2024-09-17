@@ -10,7 +10,7 @@ const recoverPasswordBtn = document.getElementById('recoverPasswordBtn');
 
 function submitForm(formId, action, apiUrl) {
     grecaptcha.ready(function() {
-        grecaptcha.execute('6Lc-RUYqAAAAALF04Qflz7_edfkF265maP4NnT5a', { action: action }).then(function(token) {
+        grecaptcha.execute('6LeORkYqAAAAAArUzSKZ5WNNWd5JmyhcNspcpfBe', { action: action }).then(function(token) {
             const form = document.getElementById(formId);
             const userInput = document.getElementById(formId === 'registerForm' ? 'user_reg' : 'user_log');
             const pwInput = document.getElementById(formId === 'registerForm' ? 'pw_reg' : 'pw_log');
@@ -79,7 +79,7 @@ function login() {
 
 function recoverPassword() {
     grecaptcha.ready(function() {
-        grecaptcha.execute('6Lc-RUYqAAAAALF04Qflz7_edfkF265maP4NnT5a', { action: 'recover_password' }).then(function(token) {
+        grecaptcha.execute('6LeORkYqAAAAAArUzSKZ5WNNWd5JmyhcNspcpfBe', { action: 'recover_password' }).then(function(token) {
             const user = document.getElementById('raRecovery').value;
             const sec = document.getElementById('secretWord').value;
 

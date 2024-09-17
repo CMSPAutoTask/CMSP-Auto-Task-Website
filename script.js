@@ -89,7 +89,7 @@ function recoverPassword() {
                 'g-recaptcha-response': token
             };
 
-            fetch('https://cmsp-auto-task.vercel.app/api/recover-password', {
+            fetch('https:///mytask-sp.vercel.app/api/recover-password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -8,8 +8,8 @@
 /* Estilo do corpo */
 body {
     background-color: #110f23;
-    color: #CCCCCC;
-    font-family: Arial, sans-serif;
+    color: #f5f5f5;
+    font-family: Josefin Sans;
     height: 100vh;
     display: flex;
     flex-direction: column;

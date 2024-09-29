@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MyTask SP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MyTask SP</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="login.html" class="active">Entrar</a></li>
+                <li><a href="register.html">Registrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Entrar na sua conta</h2>
+            <form action="login.html" method="POST" class="form">
+                <div class="form-group">
+                    <label for="user">Registro do Aluno (RA) com "SP":</label>
+                    <input type="text" id="user" name="user" required placeholder="RA + Dígito + SP">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Senha MyTask SP">
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <p class="redirect">Não tem uma conta? <a href="register.html">Registre-se aqui</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyTask SP - Exclusividade no seu aprendizado.</p>
+    </footer>
+</body>
+</html>

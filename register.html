@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar - MyTask SP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MyTask SP</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/autotask/login">Entrar</a></li>
+                <li><a href="/autotask/register" class="active">Registrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Crie sua conta</h2>
+            <form action="/autotask/register" method="POST" class="form">
+                <div class="form-group">
+                    <label for="user">Registro do Aluno:</label>
+                    <input type="text" id="user" name="user" required placeholder="Registro do Aluno (RA) + Dígito + SP">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha da Plataforma:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Confirme sua senha">
+                </div>
+                <div class="form-group">
+                    <label for="palavra-secreta">Palavra Secreta para Recuperação:</label>
+                    <input type="text" id="palavra-secreta" name="palavra-secreta" required placeholder="Palavra secreta">
+                </div>
+                <div class="form-group">
+                    <label for="convite">Código de convite:</label>
+                    <input type="text" id="convite" name="convite" required placeholder="Código de convite">
+                </div>
+                <button type="submit" class="btn-register">Registrar</button>
+            </form>
+            <p class="redirect">Já tem uma conta? <a href="/autotask/login">Entre aqui</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyTask SP - Exclusividade no seu aprendizado.</p>
+    </footer>
+</body>
+</html>

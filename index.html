@@ -55,17 +55,20 @@
     <footer>
         <p>&copy; 2024 MyTask SP - Exclusividade no seu aprendizado.</p>
     </footer>
-</body>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        turnstile.render(document.body, {
-            sitekey: '0x4AAAAAAAs1_TistvXff4mc', 
-            action: 'submit',
-            callback: function(token) {
-                document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
-            }
+
+    <div id="cf-turnstile" class="cf-turnstile"></div>
+    
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            turnstile.render('#cf-turnstile', {
+                sitekey: '0x4AAAAAAAs1_TistvXff4mc',
+                action: 'submit',
+                callback: function(token) {
+                    document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
+                }
+            });
         });
-    });
-</script>
+    </script>
+</body>
 </html>

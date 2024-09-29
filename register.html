@@ -44,6 +44,9 @@
                     <label for="convite">Código de convite:</label>
                     <input type="text" id="convite" name="convite" required placeholder="Código de convite">
                 </div>
+
+                <div id="cf-turnstile" class="cf-turnstile"></div>
+                
                 <button type="submit" class="btn-register">Registrar</button>
             </form>
             <p class="redirect">Já tem uma conta? <a href="/autotask/login">Entre aqui</a>.</p>
@@ -53,18 +56,19 @@
     <footer>
         <p>&copy; 2024 MyTask SP - Exclusividade no seu aprendizado.</p>
     </footer>
-</body>
-<script src="scripts/register.js"></script>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        turnstile.render(document.body, {
-            sitekey: '0x4AAAAAAAs1_TistvXff4mc', 
-            action: 'submit',
-            callback: function(token) {
-                document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
-            }
+
+    <script src="scripts/register.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            turnstile.render('#cf-turnstile', {
+                sitekey: '0x4AAAAAAAs1_TistvXff4mc', 
+                action: 'submit',
+                callback: function(token) {
+                    document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
+                }
+            });
         });
-    });
-</script>
+    </script>
+</body>
 </html>

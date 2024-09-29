@@ -6,9 +6,12 @@ async function loginUser(event) {
     const user = document.getElementById('user').value;
     const pw = document.getElementById('senha').value;
 
+    const turnstileToken = document.querySelector('input[name="cf-turnstile-response"]').value;
+
     let requestBody = {
         user: user,
-        pw: pw
+        pw: pw,
+        'cf-turnstile-response': turnstileToken
     };
 
     try {

@@ -9,6 +9,8 @@ async function registerUser(event) {
     const palavraSecreta = document.getElementById('palavra-secreta').value;
     const convite = document.getElementById('convite').value;
 
+    const turnstileToken = document.querySelector('input[name="cf-turnstile-response"]').value;
+
     if (pw !== confirmarSenha) {
         alert('As senhas não coincidem!');
         return;
@@ -18,7 +20,8 @@ async function registerUser(event) {
         user: user,
         pw: pw,
         secret: palavraSecreta,
-        invite: convite
+        invite: convite,
+        'cf-turnstile-response': turnstileToken
     };
 
     try {

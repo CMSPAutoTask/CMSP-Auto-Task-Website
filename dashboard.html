@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Escuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/dashboard.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAs1_TistvXff4mc" data-action="submit" data-theme="invisible"></div>
     <header>
         <h1>Meu Dashboard</h1>
     </header>
@@ -45,20 +48,5 @@
     <footer>
         <p>&copy; CMSP Auto Task</p>
     </footer>
-
-    <div id="cf-turnstile" class="cf-turnstile"></div>
-
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            turnstile.render('#cf-turnstile', {
-                sitekey: '0x4AAAAAAAs1_TistvXff4mc', 
-                action: 'submit',
-                callback: function(token) {
-                    document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
-                }
-            });
-        });
-    </script>
 </body>
 </html>

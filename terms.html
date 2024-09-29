@@ -7,6 +7,7 @@
     <title>Terms of Service</title>
 </head>
 <body>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAs1_TistvXff4mc" data-action="submit" data-theme="invisible"></div>
     <div class="terms-box">
             <h2 class="header">Termos de Uso do Serviço</h2><br>
 
@@ -66,19 +67,5 @@
             </p>
         </div>
     </div>
-    <div id="cf-turnstile" class="cf-turnstile"></div>
-
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            turnstile.render('#cf-turnstile', {
-                sitekey: '0x4AAAAAAAs1_TistvXff4mc', 
-                action: 'submit',
-                callback: function(token) {
-                    document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
-                }
-            });
-        });
-    </script>
 </body>
 </html>

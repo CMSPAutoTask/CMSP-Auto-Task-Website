@@ -58,6 +58,10 @@ header.scrolled {
     transform: scale(1.05);
 }
 
+.logo a {
+    color: var(--cor-primaria);
+}
+
 nav ul {
     list-style: none;
     display: flex;

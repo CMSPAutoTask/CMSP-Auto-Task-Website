@@ -6,8 +6,10 @@
     <title>MyTask SP</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAs1_TistvXff4mc" data-action="submit" data-theme="invisible"></div>
     <header>
         <div class="logo">
             <h1><a href="/autotask/">MyTask SP</a></h1>
@@ -55,20 +57,5 @@
     <footer>
         <p>&copy; 2024 MyTask SP - Exclusividade no seu aprendizado.</p>
     </footer>
-
-    <div id="cf-turnstile" class="cf-turnstile"></div>
-    
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            turnstile.render('#cf-turnstile', {
-                sitekey: '0x4AAAAAAAs1_TistvXff4mc',
-                action: 'submit',
-                callback: function(token) {
-                    document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
-                }
-            });
-        });
-    </script>
 </body>
 </html>

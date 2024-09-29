@@ -6,6 +6,7 @@
     <title>Login - MyTask SP</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/login.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -32,8 +33,8 @@
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required placeholder="Senha MyTask SP">
                 </div>
-                
-                <div id="cf-turnstile" class="cf-turnstile"></div>
+
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAs1_TistvXff4mc" data-action="submit"></div>
 
                 <button type="submit" class="btn-login">Entrar</button>
             </form>
@@ -45,18 +46,6 @@
         <p>&copy; 2024 MyTask SP - Exclusividade no seu aprendizado.</p>
     </footer>
 
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            turnstile.render('#cf-turnstile', {
-                sitekey: '0x4AAAAAAAs1_TistvXff4mc', // Substitua pela sua chave real
-                action: 'submit',
-                callback: function(token) {
-                    document.querySelector('form').insertAdjacentHTML('beforeend', `<input type="hidden" name="cf-turnstile-response" value="${token}">`);
-                }
-            });
-        });
-    </script>
     <script src="scripts/login.js"></script>
 </body>
 </html>

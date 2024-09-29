@@ -35,7 +35,6 @@ header {
     align-items: center;
     padding: 15px 30px;
     background-color: var(--cor-fundo-secundario);
-    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px var(--sombra);
@@ -56,6 +55,7 @@ header {
 
 .logo a {
     color: var(--cor-primaria);
+    text-decoration: none;
 }
 
 nav ul {

@@ -76,14 +76,6 @@ main {
     overflow: hidden;
 }
 
-.card h2 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    margin-bottom: 20px;
-}
-
 .card h2, .card p {
     transition: opacity 0.3s ease-in-out;
 }

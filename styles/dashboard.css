@@ -44,6 +44,18 @@ strong {
     width: 100%;
 }
 
+/* Estilo do h2 principal */
+.principal-text {
+    margin-bottom: 20px; /* Move um pouco mais para cima */
+    text-align: center;
+    color: #f5f5f5;
+}
+
+/* Estilo do span dentro do h2 */
+.principal-text span {
+    color: #eb055a; /* Cor aplicada ao span */
+}
+
 /* Área principal */
 main {
     display: grid;

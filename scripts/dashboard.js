@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function enviarIdParaApi(cardId) {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem('token');
     
     if (!token) {
         alert('Você não está autenticado! Por favor, faça login.');

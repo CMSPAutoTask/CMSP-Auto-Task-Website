@@ -31,6 +31,10 @@ header h1 {
     color: #eb055a;
 }
 
+strong {
+    color: #eb055a;
+}
+
 /* Centralização do conteúdo principal */
 .wrapper {
     display: flex;

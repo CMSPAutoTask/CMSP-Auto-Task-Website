@@ -25,6 +25,8 @@ async function loginUser(event) {
 
         if (response.ok) {
             const data = await response.json();
+            
+            localStorage.setItem('authToken', data.token);
             window.location.href = '/autotask/dashboard';
         } else {
             const errorData = await response.json();

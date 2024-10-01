@@ -18,13 +18,21 @@ function enviarIdParaApi(cardId) {
         return;
     }
 
+    const senhaInput = document.querySelector('#senhaSED');
+    const senha = senhaInput.value;
+
+    if (!senha) {
+        alert('Por favor, digite sua senha da SED.');
+        return;
+    }
+
     fetch(`https://mytask-sp.vercel.app/api/tasks/${cardId}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`  
         },
-        body: JSON.stringify({ cardId: cardId })
+        body: JSON.stringify({ cardId: cardId, pw: senha }) 
     })
     .then(response => response.json())
     .then(data => {

@@ -58,7 +58,8 @@ strong {
 
 .input-container input {
     padding: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px; 
     border: 2px solid #eb055a; 
     border-radius: 5px;
     font-size: 16px;
@@ -67,6 +68,7 @@ strong {
     outline: none; 
     transition: border-color 0.3s;
 }
+
 
 .input-container input::placeholder {
     color: #ccc; 
@@ -154,5 +156,13 @@ footer {
 
     .card {
         width: 100%;
+    }
+
+    .principal-text {
+        font-size: 20px; 
+    }
+
+    .principal-text span {
+        color: #eb055a; 
     }
 }

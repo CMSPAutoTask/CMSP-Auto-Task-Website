@@ -122,7 +122,7 @@ main {
 
 .resolver-btn {
     position: absolute;
-    bottom: -50px;
+    bottom: -50px; /* Oculta o botão inicialmente */
     left: 50%;
     transform: translateX(-50%);
     background-color: #eb055a;
@@ -131,10 +131,34 @@ main {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: bottom 0.3s ease-in-out, transform 0.3s;
+    transition: bottom 0.3s ease-in-out, transform 0.3s; /* Animação suave ao aparecer */
     font-size: 14px;
+    overflow: hidden;
 }
 
+.resolver-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: #5b13b9;
+    border-radius: 5px;
+    transition: all 6s ease-in-out;
+}
+
+.resolver-btn.active::before {
+    animation: layer 6s ease-in-out forwards;
+}
+
+@keyframes layer {
+    100% {
+        left: 0%;
+    }
+}
+
+/* Faz o botão aparecer centralizado ao passar o mouse */
 .card:hover .resolver-btn {
     bottom: 50%;
     transform: translate(-50%, 50%);
